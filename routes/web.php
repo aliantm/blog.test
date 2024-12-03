@@ -7,5 +7,5 @@ Route::get('/', function () {
 });
 
 Route::get('/posts', function () {
-    return "All post are here";
+    return "Welcome to the homepage 2";
 });
