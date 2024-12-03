@@ -3,5 +3,9 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    return "Welcome to the homepage";
+});
+
+Route::get('/posts', function () {
+    return "All post are here";
 });
