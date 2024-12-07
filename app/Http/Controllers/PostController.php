@@ -8,14 +8,15 @@ use PhpParser\Node\Expr\FuncCall;
 class PostController extends Controller
 {
     public function index(){
-        return "Here will show all posts";
+        return view('posts.index');
     }
 
     public function create(){
-        return "Here we are going to create a form";
+        return view('posts.create');
     }
 
     public function show($post){
-        return "Here show the post {$post}";
+        //compact('post'); ['post' => $post]
+        return view('posts.show', compact('post'));
     }
 }
