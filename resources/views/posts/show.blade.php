@@ -7,7 +7,7 @@
     <title>Laravel 11 | Posts</title>
 </head>
 <body>
-    <a href="/posts">Return to Post</a>
+    <a href="{{route('posts.index')}}">Return to Post</a>
     <h1> Titulo: {{$post->title}} </h1>
     <p>
         <b>Categoria: </b> {{$post->category}}
@@ -15,10 +15,10 @@
     <p>
         {{$post->content}}
     </p>
-    <a href="/posts/{{$post->id}}/edit">
+    <a href="{{route('posts.edit',$post)}}">
         Edit Post
     </a>
-    <form action="/posts/{{$post->id}}" method="post">
+    <form action="{{route('posts.destroy',$post)}}" method="post">
         @csrf
         @method('delete')
         <button type="submit">Delete Post</button>

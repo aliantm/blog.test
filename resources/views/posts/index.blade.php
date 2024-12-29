@@ -1,10 +1,10 @@
 <x-app-layout>
     <h1>Here will show all posts</h1>
-    <a href="/posts/create">Create New Post</a>
+    <a href="{{route('posts.create')}}">Create New Post</a>
     <ul>
         @foreach ($posts as $post)
             <li>
-                <a href="/posts/{{$post->id}}">
+                <a href="{{route('posts.show',$post)}}">
                     {{$post->title}}
                 </a>
             </li>
