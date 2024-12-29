@@ -9,7 +9,10 @@ use App\Models\Post;
 
 Route::get('/', HomeController::class);
 
-Route::get('/posts', [PostController::class,'index'])
+Route::resource('articulos', PostController::class)
+->parameters(['articulo' => 'post'])
+->names('posts');
+/*Route::get('/posts', [PostController::class,'index'])
      ->name('posts.index');
 
 Route::get('/posts/create', [PostController::class,'create'])
@@ -28,7 +31,7 @@ Route::put('/posts/{post}', [PostController::class,'update'])
      ->name('posts.update');
 
 Route::delete('/posts/{post}', [PostController::class,'destroy'])
-     ->name('posts.destroy');
+     ->name('posts.destroy');*/
 
 Route::get('prueba', function(){
 $post = Post::find(1);
