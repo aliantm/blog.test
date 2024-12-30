@@ -9,9 +9,9 @@ use App\Models\Post;
 
 Route::get('/', HomeController::class);
 
-Route::resource('articulos', PostController::class)
-->parameters(['articulo' => 'post'])
-->names('posts');
+Route::resource('posts', PostController::class);
+//>parameters(['articulo' => 'post'])
+//->names('posts');
 /*Route::get('/posts', [PostController::class,'index'])
      ->name('posts.index');
 
