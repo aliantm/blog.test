@@ -28,7 +28,7 @@ class StorePostRequest extends FormRequest
             'content' => 'required',
         ];
     }
-
+    /*
     public function messages()
     {
         return [
@@ -42,5 +42,5 @@ class StorePostRequest extends FormRequest
             'title' => 'name',
             
         ];
-    }
+    }*/
 }
